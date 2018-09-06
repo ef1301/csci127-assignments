@@ -56,6 +56,17 @@ def makes10(a, b):
 print(makes10(9,10))
 print(makes10(9,9))
 print(makes10(7,3))
+#Warmup-1:near_hundred
+def near_hundred(n):
+  if (abs(100-n) <= 10) or (abs(200-n) <= 10):
+    return True
+  else:
+    return False
+print(near_hundred(93))
+print(near_hundred(111))
+print(near_hundred(-50))
+print(near_hundred(290))
+print(near_hundred(191))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
