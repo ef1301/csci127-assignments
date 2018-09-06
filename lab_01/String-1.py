@@ -29,6 +29,22 @@ def diff21(n):
   return subtract
 print(diff21(58))
 print(diff21(2))
+#Warmup-1:parrot_trouble
+def parrot_trouble(talking, hour):
+  if talking:
+    if hour<7:
+      return True
+    if 7<=hour<=20:
+      return False
+    if hour>20 and hour !=20:
+      return True
+  else:
+    return False
+print(parrot_trouble(True,6))
+print(parrot_trouble(True,7))
+print(parrot_trouble(False, 6))
+print(parrot_trouble(True,21))
+print(parrot_trouble(True, 20))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
