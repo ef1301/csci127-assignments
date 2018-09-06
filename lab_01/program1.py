@@ -67,6 +67,21 @@ print(near_hundred(111))
 print(near_hundred(-50))
 print(near_hundred(290))
 print(near_hundred(191))
+
+
+#Warmup-1:not_string
+def not_string(str):
+  if len(str) >= 3 and str[:3] =="not":
+    return str
+  return "not " + str
+print(not_string("not bad"))
+print(not_string("a cat"))
+#Warmup-1:missing char
+def missing_char(str, n):
+  front = str[:n]
+  back = str[n+1:]
+  return front + back
+print(missing_char("kitten", 4))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
