@@ -21,6 +21,14 @@ def sum_double(a, b):
   if a == b:
     sum = sum*2
   return sum
+#Warmup-1: diff21
+def diff21(n):
+  subtract= abs(n-21)
+  if n>21:
+    subtract=2*subtract
+  return subtract
+print(diff21(58))
+print(diff21(2))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
