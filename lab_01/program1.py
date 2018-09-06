@@ -89,6 +89,11 @@ def front_back(str):
   mid=str[1:len(str)-1]
   return str[len(str)-1] + mid +str[0]
 print(front_back("code"))
+#Warmup-1:front3
+def front3(str):
+  str=str[:3]
+  return str+str+str
+print(front3("boat"))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
