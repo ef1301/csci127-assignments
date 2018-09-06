@@ -67,8 +67,12 @@ print(near_hundred(111))
 print(near_hundred(-50))
 print(near_hundred(290))
 print(near_hundred(191))
-
-
+#Warmup-1:pos_neg
+def pos_neg(a, b, negative):
+  if negative:
+    return (a <0 and b<0)
+  else:
+    return ((a<0 and b>0) or (a>0 and b<0))
 #Warmup-1:not_string
 def not_string(str):
   if len(str) >= 3 and str[:3] =="not":
