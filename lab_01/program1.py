@@ -45,6 +45,17 @@ print(parrot_trouble(True,7))
 print(parrot_trouble(False, 6))
 print(parrot_trouble(True,21))
 print(parrot_trouble(True, 20))
+#Warmup-1:makes10
+def makes10(a, b):
+  if a==10 or b==10:
+    return True
+  if a + b ==10:
+    return True
+  else:
+    return False
+print(makes10(9,10))
+print(makes10(9,9))
+print(makes10(7,3))
 #String-1:hello_name
 def hello_name(name):
   return "Hello "+ name + "!"
