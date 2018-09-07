@@ -116,3 +116,10 @@ def make_tags(tag, word):
 print(make_tags('i', 'Yay'))
 print(make_tags('i', 'Hello'))
 print(make_tags('cite', 'Yay'))
+#String-1:make_out_word
+def make_out_word(out, word):
+  if len(out)==4:
+    first=out[:2]
+    last=out[2:]
+  return first + word + last
+print(make_out_word("<<>>","Same"))
