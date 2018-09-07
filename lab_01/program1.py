@@ -133,3 +133,10 @@ def first_two(str):
   first = str[:2]
   return first
 print(first_two("abcde"))
+#String-1:first_half
+def first_half(str):
+  count = len(str)
+  a = count//2
+  half= str[:a]
+  return half
+print(first_half("cart"))
