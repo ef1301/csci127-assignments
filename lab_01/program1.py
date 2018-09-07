@@ -128,3 +128,8 @@ def extra_end(str):
   ends=str[-2:]
   return ends + ends + ends
 print(extra_end("Hello"))
+#String-1:first_two
+def first_two(str):
+  first = str[:2]
+  return first
+print(first_two("abcde"))
