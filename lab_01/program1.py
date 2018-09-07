@@ -123,3 +123,8 @@ def make_out_word(out, word):
     last=out[2:]
   return first + word + last
 print(make_out_word("<<>>","Same"))
+#String-1:extra_end
+def extra_end(str):
+  ends=str[-2:]
+  return ends + ends + ends
+print(extra_end("Hello"))
