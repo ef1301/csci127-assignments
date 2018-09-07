@@ -140,3 +140,8 @@ def first_half(str):
   half= str[:a]
   return half
 print(first_half("cart"))
+def without_end(str):
+  second_last= len(str)-1
+  a=str[1:second_last]
+  return a
+print(without_end("dog"))
