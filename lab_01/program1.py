@@ -154,3 +154,9 @@ def combo_string(a, b):
     return a + b + a
 print(combo_string("cat", "house"))
 print(combo_string("house", "cat"))
+#String-1:non_start
+def non_start(a, b):
+  aa= a[1:]
+  bb= b[1:]
+  return aa + bb
+print(non_start("dog", "cat"))
