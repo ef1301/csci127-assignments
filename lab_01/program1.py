@@ -140,8 +140,17 @@ def first_half(str):
   half= str[:a]
   return half
 print(first_half("cart"))
+#String-1:without_end
 def without_end(str):
   second_last= len(str)-1
   a=str[1:second_last]
   return a
 print(without_end("dog"))
+#String-1:combo_string
+def combo_string(a, b):
+  if len(a) > len(b):
+    return b +a +b
+  if len(b) > len(a):
+    return a + b + a
+print(combo_string("cat", "house"))
+print(combo_string("house", "cat"))
