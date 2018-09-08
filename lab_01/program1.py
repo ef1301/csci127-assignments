@@ -175,3 +175,8 @@ print(left2("bridges"))
 def string_times(str, n): #defined function with string input and integer input
   return str*n #str is multiplied or duplicated n times
 print(string_times("dog",4))
+#Warmup-2:string_times
+def front_times(str, n): #defined function with string input and integer input
+  a = str[:3] #takes the first 3 character and assigns to a
+  return a*n #the first 3 characters are duplicated n times
+print(front_times("water", 3))
