@@ -97,78 +97,79 @@ def front_back(str): #defined function with input str
   return str[len(str)-1] + mid +str[0]
 print(front_back("code"))
 #Warmup-1:front3
-def front3(str):
-  str=str[:3]
-  return str+str+str
+def front3(str): #defined function with string input
+  str=str[:3] #str is assigned to return the first to third character
+  return str+str+str #returned repetition 3 times
 print(front3("boat"))
 #String-1:hello_name
-def hello_name(name):
-  return "Hello "+ name + "!"
+def hello_name(name): #defined function with name input
+  return "Hello "+ name + "!" #return string"Hello" the input and "1"
 print(hello_name("Bob"))
 print(hello_name("Alice"))
 print(hello_name("X"))
 #String-1make abba
-def make_abba(a, b):
-  return a + b + b + a
+def make_abba(a, b): #defined functon with inputs a and b
+  return a + b + b + a #return a and b in an abba pattern
 print(make_abba('Hi','Bye'))
 print(make_abba('Yo','Alice'))
 print(make_abba('What','Up'))
 #String-1:make_tags
-def make_tags(tag, word):
-  return "<" + tag + ">" + word + "</" + tag + ">"
+def make_tags(tag, word): #defined function with tag and word inputs
+  return "<" + tag + ">" + word + "</" + tag + ">" # return tags between "<" & ">" and "</" & ">"
+    #in between the tags and their pairs of "<" and ">" word input occurs
 print(make_tags('i', 'Yay'))
 print(make_tags('i', 'Hello'))
 print(make_tags('cite', 'Yay'))
 #String-1:make_out_word
-def make_out_word(out, word):
-  if len(out)==4:
-    first=out[:2]
-    last=out[2:]
-  return first + word + last
+def make_out_word(out, word): #defined function with input out and word
+  if len(out)==4: #if the length of the out input is 4
+    first=out[:2] #first is assigned to the first two charaters
+    last=out[2:] #last is assigned from the second character to the last
+  return first + word + last #return the first 2 chars of out +word +the rest of the out input after the 2nd char
 print(make_out_word("<<>>","Same"))
 #String-1:extra_end
-def extra_end(str):
-  ends=str[-2:]
-  return ends + ends + ends
+def extra_end(str): #defined function with string input
+  ends=str[-2:] #assign end to take the last 2 characters
+  return ends + ends + ends #ends is duplicated 3 times
 print(extra_end("Hello"))
 #String-1:first_two
-def first_two(str):
-  first = str[:2]
-  return first
+def first_two(str): #defined function with string input
+  first = str[:2] #assign first as the first two chars
+  return first #return the first 2 chars
 print(first_two("abcde"))
 #String-1:first_half
-def first_half(str):
-  count = len(str)
-  a = count//2
-  half= str[:a]
+def first_half(str): #defined function with string input
+  count = len(str) #count is assigned to the length of the string
+  a = count//2 #a is assigned to count divied by 2 into an integer value
+  half= str[:a] #half is assigned to the first a chars
   return half
 print(first_half("cart"))
 #String-1:without_end
-def without_end(str):
-  second_last= len(str)-1
-  a=str[1:second_last]
+def without_end(str): #defined function with string input
+  second_last= len(str)-1 #second_last is assigned to the value of the length of str minus 1
+  a=str[1:second_last] #a is assigned to the string from char 1 to second_last
   return a
 print(without_end("dog"))
 #String-1:combo_string
-def combo_string(a, b):
-  if len(a) > len(b):
-    return b +a +b
-  if len(b) > len(a):
-    return a + b + a
+def combo_string(a, b): #defined function with inputs a and b
+  if len(a) > len(b): #if the length of a is greater ta b
+    return b +a +b #return sequence bab
+  if len(b) > len(a): #if the length of b is greater than a
+    return a + b + a #return sequence aba
 print(combo_string("cat", "house"))
 print(combo_string("house", "cat"))
 #String-1:non_start
-def non_start(a, b):
-  aa= a[1:]
-  bb= b[1:]
-  return aa + bb
+def non_start(a, b): #defined function with inputs a and b
+  aa= a[1:] #aa is assigned to the first char of a
+  bb= b[1:] #bb is assigned to the first character of b
+  return aa + bb #return aa+bb
 print(non_start("dog", "cat"))
 #String-1:left2
-def left2(str):
-  if len(str)>=2:
-    front=str[:2]
-    back=str[2:]
-    return back + front
+def left2(str): #defined function with string input
+  if len(str)>=2: #if the length of the string is greater than or equal to 2
+    front=str[:2] #front is assigned to the first 2 chars of the str
+    back=str[2:] #back is ssigned to the last 2 chars of the string
+    return back + front #return back +front
 print(left2("Birds"))
 print(left2("bridges"))
 #Warmup-2:string_times
