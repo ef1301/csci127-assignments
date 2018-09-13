@@ -5,7 +5,7 @@ git init
 git add quiz-01
 git commit -a -m "quiz-01"
 git push
-
+git add p1.py
 git commit -a -m "p1.py"
 git push
 
