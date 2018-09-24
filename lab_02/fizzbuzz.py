@@ -1,3 +1,6 @@
+#Emily Fang
+#Krystlle Fajardo - fajardokrystlle@gmail.com
+#Jadeja Baptiste - dejamax01@gmail.com
 def fizzbuzz(max_value):
     i = 1
     while i <= 100:
@@ -14,5 +17,3 @@ def fizzbuzz(max_value):
         i = i+1
 
 print(fizzbuzz(100))
-#Krystlle Fajardo - fajardokrystlle@gmail.com
-#Jadeja Baptiste - dejamax01@gmail.com
