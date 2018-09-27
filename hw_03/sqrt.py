@@ -1,6 +1,8 @@
 def mysqrt(n):
-    while
-    old = 10
-    new = (old+ (n/old) )/2
-    return(new)
-print(mysqrt(10))
+    i = 1
+    last_digit = n % 10
+    while i <= n:
+        i = i + 1
+        new = (i+ (n/i))/2
+        print(new)
+print(mysqrt(25))
