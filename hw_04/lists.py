@@ -1,4 +1,4 @@
-#Emily Fang
+#Emily Fang & Darren Liang
 import random
 
 def build_random_list(size,max_value):
@@ -59,5 +59,3 @@ def palindrome(l):
     else:
         return False
 print(palindrome(l))
-
-
