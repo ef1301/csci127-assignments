@@ -19,7 +19,7 @@ def build_random_list(size,max_value):
     return l
 print(build_random_list(3,100))
 
-l = [2, 3, 2, 6, 4]
+l = [3, 2, 3]
 
 def locate(l,value):
     i = 0
@@ -27,7 +27,7 @@ def locate(l,value):
         if l[i] == value:
             return i
         else:
-            i = i + 1
+            i += 1
     return -1
 print(locate(l,3))
 print(locate(l,5))
@@ -45,5 +45,19 @@ print(count(l,2))
 def reverse(l):
     return l[::-1]
 print(reverse(l))
+
+def isIncreasing(l):
+    for i in range(len(l)-1):
+        if l[i] > l[i+1]:
+            return False
+    return True
+print(isIncreasing(l))
+
+def palindrome(l):
+    if l[::-1] == l:
+        return True
+    else:
+        return False
+print(palindrome(l))
 
 
