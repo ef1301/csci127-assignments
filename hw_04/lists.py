@@ -54,8 +54,5 @@ def isIncreasing(l):
 print(isIncreasing(l))
 
 def palindrome(l):
-    if l[::-1] == l:
-        return True
-    else:
-        return False
+    return l[::-1] == 1
 print(palindrome(l))
