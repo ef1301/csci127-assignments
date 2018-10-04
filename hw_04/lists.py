@@ -1,3 +1,4 @@
+#Emily Fang
 import random
 
 def build_random_list(size,max_value):
@@ -16,3 +17,32 @@ def build_random_list(size,max_value):
         # l = l + [random.randrange(0,max_value)]
         i = i + 1
     return l
+print(build_random_list(3,100))
+
+l = [2, 3, 2, 6, 4]
+def locate(l,value):
+    i = 0
+    while i < len(l):
+        if l[i] == value:
+            return i
+        else:
+            i = i + 1
+    return -1
+print(locate(l,3))
+print(locate(l,5))
+
+def count(l,value):
+    counter = 0
+    i = 0
+    while i < len(l):
+        if l[i] == value:
+            counter += 1
+        i += 1
+    return counter
+print(count(l,2))
+
+def reverse(l):
+    return l[:len(l)-1:-1]
+print(reverse(l))
+
+
