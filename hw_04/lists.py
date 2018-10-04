@@ -20,6 +20,7 @@ def build_random_list(size,max_value):
 print(build_random_list(3,100))
 
 l = [2, 3, 2, 6, 4]
+
 def locate(l,value):
     i = 0
     while i < len(l):
@@ -42,7 +43,7 @@ def count(l,value):
 print(count(l,2))
 
 def reverse(l):
-    return l[:len(l)-1:-1]
+    return l[::-1]
 print(reverse(l))
 
 
