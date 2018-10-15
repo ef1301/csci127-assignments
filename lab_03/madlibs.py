@@ -1,3 +1,4 @@
+#EMILY FANG AND RACHIEL TIEU
 import random
 VERBS = ['ate','walked', 'ran', 'skipped'] # verbs list
 NOUNS = ['dog','sandwich','cat','food','frog'] # nouns list
