@@ -2,7 +2,7 @@
 import random
 ADJECTIVES = ["questionable", "delicious", "determined"] # adjectives list
 VERBS = ['ate','walked', 'fought', 'rode'] # verbs list
-NOUNS = ['dog','sandwich','cat','food','frog'] # nouns list
+NOUNS = ['dog','sandwich','cat','food','frog', 'sunset'] # nouns list
 HEROS = ['Spiderman', 'Hulk', 'Flash'] #heros list
 sentence = "<HERO> <VERB> the <ADJECTIVE> <NOUN> and then <HERO> <VERB> the <NOUN> later. Suddenly, a <NOUN> <VERB> a <ADJECTIVE> <NOUN>" #sentence
 
@@ -18,7 +18,7 @@ def madlib(s):
                 new_list.append(random.choice(ADJECTIVES))
         elif item == "<HERO>": # if the item is <HERO>
             new_list.append(H_random) # the H_random value initially assigned to H_random will be appended to the new list
-        else: # otherwise
+        else: # otherwise 
             new_list.append(item) # the item will be appended
     return " ".join(new_list) # just to make the returned list nicer. takes the new list's strings and combines them with a space in between
 print(madlib(sentence)) # print statement
