@@ -1,10 +1,10 @@
 #EMILY FANG AND RACHIEL TIEU
 import random
-ADJECTIVES = ["amazing", "delicious", "determined"]
-VERBS = ['ate','walked', 'fought', 'skipped'] # verbs list
+ADJECTIVES = ["questionable", "delicious", "determined"] # adjectives list
+VERBS = ['ate','walked', 'fought', 'rode'] # verbs list
 NOUNS = ['dog','sandwich','cat','food','frog'] # nouns list
 HEROS = ['Spiderman', 'Hulk', 'Flash'] #heros list
-sentence = "<HERO> <VERB> the <ADJECTIVE> <NOUN> and then <HERO> <VERB> the <NOUN> later." #sentence
+sentence = "<HERO> <VERB> the <ADJECTIVE> <NOUN> and then <HERO> <VERB> the <NOUN> later. Suddenly, a <NOUN> <VERB> a <ADJECTIVE> <NOUN>" #sentence
 
 def madlib(s):
     new_list = [] #empty list that will have strings added to it and returned
