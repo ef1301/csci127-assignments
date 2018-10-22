@@ -5,8 +5,7 @@ def compress_word(w):
     for i in w[1:]:
         if not i in vowels:
             new.append(i)
-            join = "".join(new)
-    return join
+    return "".join(new)
 print(compress_word("halloween"))
 print(compress_word("Special"))
 print(compress_word("apple"))
@@ -15,11 +14,10 @@ print(compress_word("apple"))
 def sentence(line):
     new = []
     sep = line.split(" ")
-    print(sep)
     for str in sep:
         new_str = compress_word(str)
         new.append(new_str)
-        print(new)
-    
-print(sentence("I like to eat pie"))
+    return " ".join(new)
+
+print(sentence("I like to eat apple pie"))
 print(sentence("who is there"))
