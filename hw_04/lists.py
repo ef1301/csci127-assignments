@@ -9,7 +9,7 @@
 ##    """
 ##    l = [] # start with an empty list
 ##
-a##    # make a loop that counts up to size
+ ##    # make a loop that counts up to size
 ##    i = 0
 ##    while i < size:
 ##        l.append(random.randrange(0,max_value))
