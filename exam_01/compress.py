@@ -18,3 +18,14 @@ def compress_word(w):
 print(compress_word("halloween"))
 print(compress_word("Special"))
 print(compress_word("apple"))
+
+
+def sentence(line):
+    new = []
+    sep = line.split(" ")
+    for str in sep:
+        word = compress_word(str)
+        new.append(word)
+    return " ".join(new)
+
+print(sentence("who is there"))
