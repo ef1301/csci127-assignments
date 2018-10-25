@@ -27,3 +27,4 @@ def sentence(line):
 
 print(sentence("I like to eat apple pie"))
 print(sentence("who is there"))
+#.strip removes unnecessary spaces in the front
