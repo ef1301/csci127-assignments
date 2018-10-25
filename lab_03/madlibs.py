@@ -4,7 +4,7 @@ ADJECTIVES = ["questionable", "delicious", "determined"] # adjectives list
 VERBS = ['ate','walked', 'fought', 'rode'] # verbs list
 NOUNS = ['dog','sandwich','cat','food','frog', 'sunset'] # nouns list
 HEROS = ['Spiderman', 'Hulk', 'Flash'] #heros list
-sentence = "<HERO> <VERB> the <ADJECTIVE> <NOUN> and then <HERO> <VERB> the <NOUN> later. Suddenly, a <NOUN> <VERB> a <ADJECTIVE> <NOUN>" #sentence
+sentence = "<HERO> <VERB> the <ADJECTIVE> <NOUN> and then <HERO> <VERB> the <NOUN> later. Suddenly, a <NOUN> <VERB> a <ADJECTIVE> <NOUN>." #sentence
 
 def madlib(s):
     new_list = [] #empty list that will have strings added to it and returned
