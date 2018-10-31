@@ -10,11 +10,11 @@ def count(str):
             if i not in lady: # if the i is not in the lady bucket
                 lady.append(i) # add i to the lady bucket 
                 counter.append(1) # add 1 t the counter bucket to begin the count and create the range
-#                print(lady)
+#                print(lady) 
 #                print(counter)
             else: #otherwise
-                counter[lady.index(i)] += 1
-                print(counter)
+                counter[lady.index(i)] += 1 #adds 1 to each occurance of i at the index of i
+#                print(counter)
     return counter
 ##    
 ##def happy(n,b): #happiness check
@@ -32,8 +32,15 @@ def count(str):
 
 ##def happyLadybugs(n,b):
 ##    n = len(b)
-    
-g = "RBY_YBR"
-print(count(g))
+
+g = ["RBY_YBR", "AABBC", "DD__FQ_QQF"]
+def test(list):
+    """
+TESTING TESTING 123
+    """
+    for item in list:
+        print(count(item))
+#print(test(g))
+#print(count(g))
 ##print(happy(5,g))
 ##print(happyLadybugs(g))
