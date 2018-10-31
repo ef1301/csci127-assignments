@@ -18,23 +18,29 @@ def count(str):
     return counter
 
 def happy(games,str): #happiness check
-    if games == 0: #there can't not be anything in the string
-        return False
-    elif games == 1 and str[0] == "_": #if there's only "_" in the string
-        return True
-    elif "_" in str: # if "_" isn't in b
+    if len(str) < 3:
+        if len(str) == 0:
+            return False
+        if str[0] == str[1]:
+            return True
+        elif len(str) == 1 and str[0] == "_":
+            return True
+        else:
+            return False
+    elif "_" in str: # if "_" in b
         check = count(str)
         for i in check:
             if i < 2:
                 return False
             else:
                 return True
-    for i in range(0,games):
+        pass
+    for i in range(0,len(str)):
         if i>0 and str[i] != str[i-1]:
             return False
-        if str[i] != str[i+1]:
-            print(i)
+        elif str[i] != str[i+1]:
             return False
+
     return True
 
 def happyLadybug(games,str):
@@ -44,5 +50,15 @@ def happyLadybug(games,str):
         return "NO"
     return "YES"
 
-print(happy(6,"RBY_YBR"))
-print(happyLadybug(6,"RBY_YBR"))
+
+def test(games,str):
+    return happyLadybug(games,str)
+
+print(test(7,"RBY_YBR"))
+print(test(6,"X_Y__X"))
+print(test(6,"B_RRBR"))
+print(test(5,"AABBC"))
+print(test(7,"AABBC_C"))
+#print(test(6,"AABDBC"))
+print(test(2,"RR"))
+print(test(6,""))
