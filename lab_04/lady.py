@@ -29,12 +29,13 @@ def happy(games,str): #happiness check
             return False
     elif len(str) > 3 and "_" in str: # if "_" in b
         check = count(str)
+        counter = []
         for i in check:
-            print(i)
-            if i < 2:
-                return False
-            else:
-                return True
+            if i >= 2:
+                counter.append(i)
+##            else:
+##                return False
+        print(counter)
         pass
     for i in range(0,len(str)):
         if i>0 and str[i] != str[i-1]:
@@ -57,11 +58,11 @@ def test(games,str):
 
 ##print(1, test(7,"RBY_YBR"))
 print(2, test(6,"X_Y__X"))
-##print(3, test(6,"B_RRBR"))
+print(3, test(6,"B_RRBR"))
 ##print(4, test(5,"AABBC"))
 ##print(5, test(7,"AABBC_C"))
 ##print(6, test(6,"AABDBC"))
-##print(7, test(2,"RR"))
+##print(7, test(2,"RX"))
 ##print(8, test(6,""))
 ##print(9, test(3,"_"))
 ##print(10, test(3,"__"))
