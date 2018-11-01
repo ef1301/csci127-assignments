@@ -40,7 +40,6 @@ def happy(games,str): #happiness check
             return False
         elif str[i] != str[i+1]:
             return False
-
     return True
 
 def happyLadybug(games,str):
