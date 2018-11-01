@@ -1,8 +1,4 @@
 def count(str):
-    """
-    Utilizes 'buckets' to store information: the different colors and how
-    many times they occur in a string.
-    """
     lady = [] # stores the different color variables
     counter = [] # stores the occurances of each color variable in the order of the lady bucket
     for i in str: # runs through each item in the parameter string
@@ -15,34 +11,33 @@ def count(str):
     return counter
 
 def happy(games,str):
-    """
-    HAPPY CHECK
-    """
     if games < 3: #if the length is less than 3 (if length is 2,1,0)
-        if games == 0: #the string can't have nothing in it
-            return False
-        elif games == 1 and str[0] == "_": #if only an empty cell
+        if games < 2 and str[0] == "_": #if only an empty cell
             return True
         elif str[0] == str[1]: #if the first is the same as the second
             return True
         else:
             return False
-    elif games >= 3: # if length is greater than 3 and "_" in b
-        for i in count(str):
-            if i < 2:
-                return False
-        return True
     for i in range(0,games):
-        if i>0 and str[i] != str[i-1]:
+        if str[i] != str[i+1] or str[i] != str[i-1]:
             return False
-        elif str[i] != str[i+1]:
-            return False
+    if str[i] != str[i+1] or str[games-1] != str[games-2]:
+        return False
     return True
 
-def happyLadybug(games,str):
-    if happy(games,str) == True: #if happy/True
+def position_check(games,str):
+    if happy(games,str):
         pass
-    elif happy(games,str) != True:
+    elif "_" in str: # if length is greater than 3 and "_" in b
+        for i in count(str): #checks if count is at least 2 of each letter in the string
+            if i < 2: #if count is less than 2
+                return False
+        return True
+
+def happyLadybug(games,str):
+    if position_check: #if happy/True
+        pass
+    elif position_check != True:
         return "NO"
     return "YES"
 
