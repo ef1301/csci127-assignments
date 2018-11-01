@@ -18,16 +18,16 @@ def count(str):
     return counter
 
 def happy(games,str): #happiness check
-    if len(str) < 3:
-        if len(str) == 0:
+    if len(str) < 3: #if the length is less than 3 (if length is 2,1,0)
+        if len(str) == 0: #the string can't have nothing in it
             return False
-        if len(str) == 1 and str[0] == "_":
+        if len(str) == 1 and str[0] == "_": #if only an empty cell
             return True
-        if str[0] == str[1]:
+        if str[0] == str[1]: #if the first is the same as the second
             return True
         else:
             return False
-    elif len(str) > 3 and "_" in str: # if "_" in b
+    elif len(str) >= 3 or "_" in str: # if length is greater than 3 and "_" in b
         check = count(str)
         for i in check:
             if i < 2:
@@ -61,7 +61,11 @@ print(4, test(5,"AABBC"), "NO")
 print(5, test(7,"AABBC_C"), "YES")
 print(6, test(6,"AABDBC"), "NO")
 print(7, test(2,"RX"), "NO")
-print(8, test(6,""))
+print(8, test(6,""), "NO")
 print(9, test(3,"_"), "YES")
 print(10, test(3,"__"), "YES")
 print(11, test(5,"DD__FQ_QQF"), "YES")
+print(12, test(2,"DD_"), "YES")
+print(13, test(5,"DD"), "YES")
+print(14, test(5,"QQQ_"), "YES")
+print(15, test(5,"QQ_QQ"), "YES")
