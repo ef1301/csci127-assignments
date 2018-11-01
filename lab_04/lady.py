@@ -29,13 +29,11 @@ def happy(games,str): #happiness check
             return False
     elif len(str) > 3 and "_" in str: # if "_" in b
         check = count(str)
-        counter = []
         for i in check:
-            if i >= 2:
-                counter.append(i)
-##            else:
-##                return False
-        print(counter)
+            if i < 2:
+                return False
+        return True
+##        print(counter)
         pass
     for i in range(0,len(str)):
         if i>0 and str[i] != str[i-1]:
@@ -56,14 +54,14 @@ def happyLadybug(games,str):
 def test(games,str):
     return happyLadybug(games,str)
 
-##print(1, test(7,"RBY_YBR"))
-print(2, test(6,"X_Y__X"))
-print(3, test(6,"B_RRBR"))
-##print(4, test(5,"AABBC"))
-##print(5, test(7,"AABBC_C"))
-##print(6, test(6,"AABDBC"))
-##print(7, test(2,"RX"))
-##print(8, test(6,""))
-##print(9, test(3,"_"))
-##print(10, test(3,"__"))
-##print(11, test(5,"DD__FQ_QQF"))
+print(1, test(7,"RBY_YBR"), "YES")
+print(2, test(6,"X_Y__X"), "NO")
+print(3, test(6,"B_RRBR"), "YES")
+print(4, test(5,"AABBC"), "NO")
+print(5, test(7,"AABBC_C"), "YES")
+print(6, test(6,"AABDBC"), "NO")
+print(7, test(2,"RX"), "NO")
+print(8, test(6,""))
+print(9, test(3,"_"), "YES")
+print(10, test(3,"__"), "YES")
+print(11, test(5,"DD__FQ_QQF"), "YES")
