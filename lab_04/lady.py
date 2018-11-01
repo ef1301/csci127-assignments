@@ -1,8 +1,4 @@
 def count(str):
-    """
-    Utilizes 'buckets' to store information: the different colors and how
-    many times they occur in a string.
-    """
     lady = [] # stores the different color variables
     counter = [] # stores the occurances of each color variable in the order of the lady bucket
     for i in str: # runs through each item in the parameter string
@@ -15,9 +11,6 @@ def count(str):
     return counter
 
 def happy(games,str):
-    """
-    HAPPY CHECK
-    """
     if games < 3: #if the length is less than 3 (if length is 2,1,0)
         if games == 0: #the string can't have nothing in it
             return False
