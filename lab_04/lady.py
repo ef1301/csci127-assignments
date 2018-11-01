@@ -14,7 +14,10 @@ def count(str):
                 counter[lady.index(i)] += 1 #adds 1 to each occurance of i at the index of i
     return counter
 
-def happy(games,str): #happiness check
+def happy(games,str):
+    """
+    HAPPY CHECK
+    """
     if games < 3: #if the length is less than 3 (if length is 2,1,0)
         if games == 0: #the string can't have nothing in it
             return False
