@@ -10,39 +10,39 @@ def count(str):
                 counter[lady.index(i)] += 1 #adds 1 to each occurance of i at the index of i
     return counter
 
-def happy(games,str):
-    if games < 3: #if the length is less than 3 (if length is 2,1,0)
-        if games == 0: #the string can't have nothing in it
+def happy(n,str):
+    if n < 3: #if the length is less than 3 (if length is 2,1,0)
+        if n == 0: #the string can't have nothing in it
             return False
-        elif games == 1 and str[0] == "_": #if only an empty cell
+        elif n == 1 and str[0] == "_": #if only an empty cell
             return True
         elif str[0] == str[1]: #if the first is the same as the second
             return True
         else:
             return False
-    elif games >= 3: # if length is greater than 3 and "_" in b
+    elif n >= 3: # if length is greater than 3 and "_" in b
         for i in count(str):
             if i < 2:
                 return False
         return True
     return True
 
-def happyLadybug(games,str):
-    if happy(games,str) == True: #if happy/True
+def happyLadybug(n,b):
+    if happy(n,b) == True: #if happy/True
         pass
-    elif happy(games,str) != True:
+    elif happy(n,b) != True:
         return "NO"
     return "YES"
 
-def test(games,str):
-    return happyLadybug(games,str)
+def test(n,b):
+    return happyLadybug(n,b)
 
 print(1, test(7,"RBY_YBR"), "YES")
 print(2, test(6,"X_Y__X"), "NO")
 print(3, test(6,"B_RRBR"), "YES")
 print(4, test(5,"AABBC"), "NO")
 print(5, test(7,"AABBC_C"), "YES")
-print(6, test(6,"AABDBC"), "NO")
+print(6, test(4,"AABB_"), "YES")
 print(7, test(2,"RX"), "NO")
 print(8, test(0,""), "NO")
 print(9, test(1,"_"), "YES")
@@ -52,3 +52,4 @@ print(12, test(3,"DD_"), "YES")
 print(13, test(2,"DD"), "YES")
 print(14, test(4,"QQQ_"), "YES")
 print(15, test(5,"QQ_QQ"), "YES")
+print(15, test(9,"QQAABBCCC"), "YES")
