@@ -24,6 +24,10 @@ def happy(n,str):
         for i in count(str):
             if i < 2:
                 return False
+            elif "_" not in str:
+                if str[i]==str[i+1] or str[i]==str[i-1]:
+                    return True
+                return False
         return True
     return True
 
@@ -50,6 +54,6 @@ print(10, test(2,"__"), "YES")
 print(11, test(10,"DD__FQ_QQF"), "YES")
 print(12, test(3,"DD_"), "YES")
 print(13, test(2,"DD"), "YES")
-print(14, test(4,"QQQ_"), "YES")
-print(15, test(5,"QQ_QQ"), "YES")
-print(15, test(9,"QQAABBCCC"), "YES")
+print(14, test(4,"QAQA"), "NO")
+print(16, test(9,"QQAABBCCC"), "YES")
+print(17, test(9,"QAQABB_CC"), "YES")
