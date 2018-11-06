@@ -26,14 +26,15 @@ def happy(n,str):
         d = dict(count(str)).values()
         if min(d) < 2:
             return False
-        elif "_" not in str and min(d) < 2:
+        elif "_" not in str and min(d) >= 2:
             for i in range(0,n):
-                if str[i] == str[i+1]:
-                    pass
+                if str[i] == str[i+1] and str[i] == str[i-1]:
+                    return True
                 else:
                     return False
-            return False
-    return True
+        elif min(d) >= 2 and "_" in str:
+            return True
+        return True
 
 def happyLadybug(n,b):
     if happy(n,b) == True: #if happy/True
