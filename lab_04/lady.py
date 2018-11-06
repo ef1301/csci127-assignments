@@ -1,14 +1,16 @@
 def count(str):
-    lady = [] # stores the different color variables
-    counter = [] # stores the occurances of each color variable in the order of the lady bucket
+##    lady = [] # stores the different color variables
+##    counter = [] # stores the occurances of each color variable in the order of the lady bucket
+    d = {}
     for i in str: # runs through each item in the parameter string
         if i != "_": # as long as i is not underscore
-            if i not in lady: # if the i is not in the lady bucket
-                lady.append(i) # add i to the lady bucket
-                counter.append(1) # add 1 t the counter bucket to begin the count and create the range
+            if i not in d: # if the i is not in the lady bucket
+##                lady.append(i) # add i to the lady bucket
+##                counter.append(1) # add 1 t the counter bucket to begin the count and create the range
+                d[i] = 1
             else: #otherwise
-                counter[lady.index(i)] += 1 #adds 1 to each occurance of i at the index of i
-    return counter
+                d[i] += 1 #adds 1 to each occurance of i at the index of i
+    return d
 
 def happy(n,str):
     if n < 3: #if the length is less than 3 (if length is 2,1,0)
@@ -16,28 +18,29 @@ def happy(n,str):
             return False
         elif n == 1 and str[0] == "_": #if only an empty cell
             return True
-        elif str[0] == str[1]: #if the first is the same as the second
+        elif n ==2 and str[0] == str[1]: #if the first is the same as the second
             return True
         else:
             return False
-    elif n >= 3: # if length is greater than 3 and "_" in b
-        for i in count(str):
-            if i < 2:
-                return False
-            elif "_" not in str:
-                if str[i]==str[i+1] or str[i]==str[i-1]:
-                    return True
-                return False
-        return True
+    else: # if length is greater than 3 and "_" in b
+        d = dict(count(str)).values()
+        if min(d) < 2:
+            return False
+        elif "_" not in str and min(d) < 2:
+            for i in range(0,n):
+                if str[i] == str[i+1]:
+                    pass
+                else:
+                    return False
+            return False
     return True
 
 def happyLadybug(n,b):
     if happy(n,b) == True: #if happy/True
-        pass
+        return "YES"
     elif happy(n,b) != True:
         return "NO"
-    return "YES"
-
+    
 def test(n,b):
     return happyLadybug(n,b)
 
