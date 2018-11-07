@@ -27,7 +27,7 @@ def happy(n,str):
         if min(d) < 2:
             return False
         elif "_" not in str and min(d) >= 2:
-            for i in range(0,n):
+            for i in range(1,n):
                 if str[i] == str[i+1] and str[i] == str[i-1]:
                     return True
                 else:
