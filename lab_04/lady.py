@@ -13,6 +13,8 @@ def count(str):
     return d
 
 def happy(n,str):
+    first = str[0]
+    last = str[-1]
     if n < 3: #if the length is less than 3 (if length is 2,1,0)
         if n == 0: #the string can't have nothing in it
             return False
@@ -24,40 +26,42 @@ def happy(n,str):
             return False
     else: # if length is greater than 3 and "_" in b
         d = dict(count(str)).values()
-        if min(d) < 2:
-            return False
-        elif "_" not in str and min(d) >= 2:
+        if "_" not in str:
             for i in range(1,n):
-                if str[i] == str[i+1] and str[i] == str[i-1]:
+                if str[i] != "_":
+                    if first == str[i]:
+                        continue
+                elif str[i] == str[i+1] and str[i] == str[i-1]:
                     return True
                 else:
                     return False
-        elif min(d) >= 2 and "_" in str:
-            return True
-        return True
+        return False
 
 def happyLadybug(n,b):
     if happy(n,b) == True: #if happy/True
         return "YES"
-    elif happy(n,b) != True:
+    else:
         return "NO"
     
 def test(n,b):
     return happyLadybug(n,b)
 
+print("-----------YES-----------")
 print(1, test(7,"RBY_YBR"), "YES")
-print(2, test(6,"X_Y__X"), "NO")
-print(3, test(6,"B_RRBR"), "YES")
-print(4, test(5,"AABBC"), "NO")
-print(5, test(7,"AABBC_C"), "YES")
-print(6, test(4,"AABB_"), "YES")
-print(7, test(2,"RX"), "NO")
-print(8, test(0,""), "NO")
-print(9, test(1,"_"), "YES")
-print(10, test(2,"__"), "YES")
-print(11, test(10,"DD__FQ_QQF"), "YES")
-print(12, test(3,"DD_"), "YES")
-print(13, test(2,"DD"), "YES")
-print(14, test(4,"QAQA"), "NO")
-print(16, test(9,"QQAABBCCC"), "YES")
-print(17, test(9,"QAQABB_CC"), "YES")
+print(2, test(6,"B_RRBR"), "YES")
+print(3, test(7,"AABBC_C"), "YES")
+print(4, test(4,"AABB_"), "YES")
+print(5, test(1,"_"), "YES")
+print(6, test(2,"__"), "YES")
+print(7, test(10,"DD__FQ_QQF"), "YES")
+print(8, test(3,"DD_"), "YES")
+print(9, test(2,"DD"), "YES")
+print(10, test(9,"QQAABBCCC"), "YES")
+print(11, test(9,"QAQABB_CC"), "YES")
+print("-----------NO------------")
+print(1, test(6,"X_Y__X"), "NO")
+print(2, test(5,"AABBC"), "NO")
+print(3, test(2,"RX"), "NO")
+print(4, test(0,""), "NO")
+print(5, test(4,"QAQA"), "NO")
+print(6, test(9,"BAAB"), "NO")
