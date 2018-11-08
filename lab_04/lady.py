@@ -24,19 +24,21 @@ def happy(n,str):
             return False
     else: # if length is greater than 3 and "_" in b
         first = str[0]
-        last = str[-1]
         d = dict(count(str)).values()
+        counter = 0
+        if min(d) >= 2 and "_" not in str:
+            for i in range(1,n):
+                if first==str[i]:
+                    continue
+                else:
+                    first = str[i]
+                    counter = counter + 1
+            if counter >= len(d):
+                return False
+            else:
+                return True
         if min(d) < 2:
             return False
-        elif "_" not in str:
-            for i in range(1,n):
-                if str[i] != "_":
-                    if first == str[i]:
-                        continue
-                elif str[i] == str[i+1] and str[i] == str[i-1]:
-                    return True
-                else:
-                    return False 
         return True
 
 def happyLadybug(n,b):
@@ -66,4 +68,4 @@ print(2, test(5,"AABBC"), "NO")
 print(3, test(2,"RX"), "NO")
 print(4, test(0,""), "NO")
 print(5, test(4,"QAQA"), "NO")
-print(6, test(9,"BAAB"), "NO")
+print(6, test(4,"BAAB"), "NO")
