@@ -13,8 +13,6 @@ def count(str):
     return d
 
 def happy(n,str):
-    first = str[0]
-    last = str[-1]
     if n < 3: #if the length is less than 3 (if length is 2,1,0)
         if n == 0: #the string can't have nothing in it
             return False
@@ -25,17 +23,22 @@ def happy(n,str):
         else:
             return False
     else: # if length is greater than 3 and "_" in b
+        first = str[0]
+        last = str[-1]
         d = dict(count(str)).values()
-        if "_" not in str:
+        if min(d) < 2:
+            return False
+        elif "_" not in str:
             for i in range(1,n):
                 if str[i] != "_":
                     if first == str[i]:
                         continue
+                    continue
                 elif str[i] == str[i+1] and str[i] == str[i-1]:
                     return True
                 else:
-                    return False
-        return False
+                    return False 
+        return True
 
 def happyLadybug(n,b):
     if happy(n,b) == True: #if happy/True
