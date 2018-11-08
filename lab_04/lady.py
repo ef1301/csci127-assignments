@@ -33,7 +33,6 @@ def happy(n,str):
                 if str[i] != "_":
                     if first == str[i]:
                         continue
-                    continue
                 elif str[i] == str[i+1] and str[i] == str[i-1]:
                     return True
                 else:
