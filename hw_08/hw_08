@@ -16,7 +16,7 @@ def clean_data(s):
 def next(string):
     d={}
     s = string.split()
-    for i in range(0,len(s)-1):
+    for i in range(0,len(s)-2):
         d.setdefault(s[i],[])
         d[s[i]].append(s[i+1])
     return d
