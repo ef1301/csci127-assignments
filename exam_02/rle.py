@@ -14,7 +14,7 @@ def encode(input):
             for i in range(i,len(input)):
                 if input[i-1] == input[i]:
                     count += 1
-            result = [input[i],count]
+            result = [input[i-1],count]
     list.append(result)
     return list
 
