@@ -2,19 +2,13 @@ def encode(input):
     list = []
     count = 1
     for i in range(1,len(input)):
-        if input[i-1] == input[i]:
+        if input[i] == input[i-1]:
             count += 1
-            result = [input[i],count]
-##            print(result)
-        elif input[i-1] != input[i]:
+        else:
             result = [input[i-1],count]
             list.append(result)
-##            print(list)
-            count = 0
-            for i in range(i,len(input)):
-                if input[i-1] == input[i]:
-                    count += 1
-            result = [input[i-1],count]
+            count = 1
+        result = [input[i],count]
     list.append(result)
     return list
 
