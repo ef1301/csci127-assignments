@@ -28,3 +28,6 @@ def score(w):
 print(score("AEIOU"))
 print(score("hello"))
 print(score("Emily"))
+print(score("COOKIES"))
+print(score("DOGS"))
+print(score("MATH"))
