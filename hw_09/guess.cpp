@@ -11,20 +11,23 @@ int main() {
   int big = 99;
   int eval;
   int guess;
-  
+
+  guess = (big+smol)/2;
+    
   std::cout << "Please enter a number from 0-99. ";
   std::cin >> input;
+  std::cout << "Guess: " << guess << std:endl;
   std::cout << "Higher? = 1 Lower? = -1 Correct? = 0: ";
   std::cin >> eval;
  
   while (eval != 0){
-    guess = (big+smol) / 2;
     if (eval == 1){
       big = guess;
     }
     else {
       smol = guess;
     }
+    guess = (smol+big) / 2;
     std::cout << "New guess=" << guess << std::endl;
     std::cout << "Higher? = 1 Lower? = -1 Correct = 0: ";
     std::cin >> eval;
