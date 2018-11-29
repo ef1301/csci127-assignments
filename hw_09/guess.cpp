@@ -16,7 +16,7 @@ int main() {
     
   std::cout << "Please enter a number from 0-99. ";
   std::cin >> input;
-  std::cout << "Guess: " << guess << std:endl;
+  std::cout << "Guess: " << guess << std::endl;
   std::cout << "Higher? = 1 Lower? = -1 Correct? = 0: ";
   std::cin >> eval;
  
