@@ -9,9 +9,9 @@ int discriminant(int a, int b, int c){
 
 double quadsolve(int a, int b, int c){
   double d;
-  d = discriminant(a,b,c);
+  d = sqrt(discriminant(a,b,c));
   if(d>=0){
-    return (-b+sqrt(d))/(2*a);
+    return (-b+d)/(2*a);
   }
   else{
     return 0;
