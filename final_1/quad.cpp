@@ -7,8 +7,8 @@ int discriminant(int a, int b, int c){
   return result;
 }
 
-int quadsolve(int a, int b, int c){
-  int d;
+double quadsolve(int a, int b, int c){
+  double d;
   d = discriminant(a,b,c);
   if(d>=0){
     return (-b+sqrt(d))/2*a;
@@ -21,8 +21,10 @@ int quadsolve(int a, int b, int c){
 int main(){
   std::cout << discriminant(1,2,3) << std::endl;
   std::cout << discriminant(6,10,-1) << std::endl;
+  std::cout << discriminant(1,6,-14) << std::endl;
   std::cout << quadsolve(1,2,3) << std::endl;
-  std::cout << quadsolve(6,10,-1) <<std::endl;
+  std::cout << quadsolve(6,10,-1) << std::endl;
+  std::cout << quadsolve(1,6,-14) << std::endl;
   return 0;
 }
 
