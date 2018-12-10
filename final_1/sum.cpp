@@ -14,5 +14,7 @@ int sumofsquares(int a, int b){
 
 int main(){
   std::cout << sumofsquares(5,10) << std::endl;
+  std::cout << sumofsquares(1,5) << std::endl;
+  std::cout << sumofsquares(3,9) << std::endl;
   return 0;
 }
