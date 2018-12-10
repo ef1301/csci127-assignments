@@ -4,7 +4,7 @@ int sumofsquares(int a, int b){
   int sum;
   while(a<b){
     sum = 0;
-    for(a ; a<b+1 ; a = a+1){
+    for(a; a<b+1; a = a+1){
       int square = a*a;
       sum = sum + square;
     }
