@@ -10,7 +10,7 @@ def addline(d,line):
             l.append(item)
             d.setdefault(item[0],l)
     return d
-print(addline({},"Cats Birds donkey Dove"))
+print(addline({},"Cats Birds donkey Dove camel coffee"))
 
 def main(d,line):
     i = 0
@@ -18,7 +18,8 @@ def main(d,line):
         addline(d,line)
         i += 1
     return d
-print(main({},"Cats Birds donkey Dove"))
+
+print(main({},"Cats Birds donkey Dove camel coffee"))
 
 def spellcheck(d,word):
     lower = word.lower()
@@ -28,8 +29,10 @@ def spellcheck(d,word):
         else:
             return False
     return False
-d = addline({},"Cats Birds donkey Dove")
+
+d = addline({},"Cats Birds donkey Dove camel coffee")
 print(spellcheck(d,"donkey"))
 print(spellcheck(d,"cats"))
 print(spellcheck(d,"Bird"))
 print(spellcheck(d,"Birds"))
+print(spellcheck(d,"Coffee"))
