@@ -5,11 +5,10 @@ def addline(d,line):
         l = []
         print(item)
         if item[0] in d:
-            l.append(item)
-            d[item[0]] = l
+            d[item[0]].append(item)
+            d[item[0]].append(l)
         else:
-            d.setdefault(item[0],0)
             l.append(item)
-            d[item[0]] = l
+            d.setdefault(item[0],l)
     return d
-print(addline({},"Cats Birds donkey dove"))
+print(addline({},"Cats Birds donkey Dove"))
