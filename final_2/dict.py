@@ -8,6 +8,7 @@ def addline(d,line):
             l.append(item)
             d[item[0]] = l
         else:
+            d.setdefault(item[0],0)
             l.append(item)
             d[item[0]] = l
     return d

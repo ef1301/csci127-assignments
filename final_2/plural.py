@@ -14,10 +14,9 @@ def notPossesive(line):
     split = line.split()
     count = 0
     for item in split:
-##        print(count)
-##        print(item)
         if item[-1] == "s":
-            if item[-2:-1] != "'s":
+##            print(item[-2:len(item)])
+            if item[-2:len(item)] != "'s":
                 count += 1
         else:
             continue
