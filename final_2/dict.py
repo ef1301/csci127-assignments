@@ -12,14 +12,20 @@ def addline(d,line):
     return d
 print(addline({},"Cats Birds donkey Dove camel coffee"))
 
-def main(d,line):
-    i = 0
-    while i < 5:
-        addline(d,line)
-        i += 1
-    return d
-
-print(main({},"Cats Birds donkey Dove camel coffee"))
+##def main(d,line):
+##    i = 0
+##    while i < 5:
+##        addline(d,line)
+##        i += 1
+##    return d
+d = addline({},"Cats Birds donkey Dove camel coffee")
+addline(d,"I don't know what I am doing")
+addline(d,"Random words here")
+addline(d,"Insert sad faces here")
+addline(d,"May I please pass")
+addline(d,"I guess not")
+print(d)
+##print(main({},"Cats Birds donkey Dove camel coffee"))
 
 def spellcheck(d,word):
     lower = word.lower()
